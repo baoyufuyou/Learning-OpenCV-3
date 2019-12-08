@@ -288,6 +288,20 @@ cpack -C CPackConfig.cmake
 ```
 cpack -C CPackSourceConfig.cmake
 ```
-
+会生成.sh+.tar.gz文件，执行sh文件可以进行安装。
+### 其他平台转换到cmakelist (未验证)
+- autotools
+am2cmake 可以将 autotools 系的项目转换到 CMake，这个工具的一个成功案例是 KDE 。
+Alternative Automake2CMake 可以转换使用 automake 的 KDevelop 工程项目。
+Converting autoconf tests
+- qmake
+qmake converter 可以转换使用 QT 的 qmake 的工程。
+- Visual Studio
+vcproj2cmake.rb 可以根据 Visual Studio 的工程文件（后缀名是 .vcproj 或 .vcxproj）生成 CMakeLists.txt 文件。
+vcproj2cmake.ps1 vcproj2cmake 的 PowerShell 版本。
+folders4cmake 根据 Visual Studio 项目文件生成相应的 “source_group” 信息，这些信息可以很方便的在 CMake 脚本中使用。支持 Visual Studio 9/10 工程文件。
+- CMakeLists.txt 自动推导
+gencmake 根据现有文件推导 CMakeLists.txt 文件。
+CMakeListGenerator 应用一套文件和目录分析创建出完整的 CMakeLists.txt 文件。仅支持 Win32 平台
 
 ## 可视化图片
